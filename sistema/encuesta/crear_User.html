@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Numeros(string){
+            var out = '';
+            var filtro = '1234567890';
+        for (var i=0; i<string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1)
+        out +=string.charAt(i);
+        return out;
+        }
+                </script>
+</head>
+<body>
+    <header class="titulo">Crear Usuario</header>
+    <form action="../altas/alta_U.php" method="post">
+    <table border="1">
+        <th colspan="10">Usuario</th>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Alias</td>
+            <td>Contraseña</td>
+            <td>DNI</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="nombre" required></td>
+            <td><input type="text" name="apellido" required></td>
+            <td><input type="text" name="alias" required></td>
+            <td><input type="text" name="pass" maxlength="4" required></td>
+            <td><input type="text" name="DNI" maxlength="8" required></td>
+            <input type="hidden" name="cod_categoria" value="1">
+        </tr>
+        <tr colspan="8">
+            <td><input type="submit" value="Enviar"></td>
+            <td><input type="reset" value="Borrar"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

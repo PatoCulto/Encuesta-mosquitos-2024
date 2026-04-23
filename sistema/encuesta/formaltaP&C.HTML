@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Numeros(string){
+            var out = '';
+            var filtro = '1234567890';
+        for (var i=0; i<string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1)
+        out +=string.charAt(i);
+        return out;
+        }
+                </script>
+</head>
+<body>
+    <header class="titulo">REGISTRO</header>
+<center>    <div class="casa">
+    <form action="alta_P&C.php" method="post">
+        <table border="1">
+            <th colspan="8">Registro de Casa</th>
+            <tr>
+                <td>numero de casa</td>
+                <td>Barrio</td>
+                <td>Chacra</td>
+                <td>Sector</td>
+                <td>calle</td>
+                <td>Numero de Calle</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="nro_Casa" maxlength="4" required onkeyup="this.value=Numeros(this.value)"></td>
+                <td><input type="text" name="barrio" maxlength="30" required></td>
+                <td><input type="text" name="chacra" maxlength="4" required onkeyup="this.value=Numeros(this.value)"></td>
+                <td><input type="text" name="sector" maxlength="20" required ></td>
+                <td><input type="text" name="calle" maxlength="30" required></td>
+                <td><input type="text" name="nro_calle" maxlength="5" required onkeyup="this.value=Numeros(this.value)"></td>
+            </tr>
+            <tr>
+               
+            </tr>
+
+        </table>
+    
+</div>
+<br><br>
+<br><br>
+<div class="persona" style="padding-top: 1px;">
+        <table border="1">
+            <th colspan="6">Registro de persona</th>
+            <tr>
+                <td>nombre</td>
+                <td>apellido</td>
+                <td>DNI</td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" name="nombre" maxlength="30" required></td>
+                <td><input type="text" name="apellido" maxlength="25" required></td>
+                <td><input type="text" name="DNI" maxlength="8" required onkeyup="this.value=Numeros(this.value)"></td>
+            </tr>
+            <tr>
+                <td colspan="6" align="center" style="padding-top: 1.5px; padding-bottom: 1.5px;"><input type="submit" value="Aceptar"><input type="reset" value="Borrar"></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+<br> </center>
+<br><br><br><br><br><br><br><br><br>
+<footer>
+    <div class="alumnos">alumnos: <br>
+        <a href="#">ortellado,</a> <a href="#">garcia,</a>  <a href="#">ozuna.</a>
+    </div>
+</footer>
+</body>
+</html>
